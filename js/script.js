@@ -14,6 +14,32 @@ canBtn.addEventListener("click", (e) => {
     formData.style.display = "none";
 })
 
+// get all data from LS then show it
+const updateNote = () => {
+    const parent = document.querySelector(".notes");
+parent.innerHTML = '';
+for(let i = 0; i < localStorage.length; i++){
+    const item = JSON.parse(localStorage.getItem(`note${i}`));
+    // const {title, date, msg} = item || 0;
+    
+    parent.innerHTML += `
+      <div class="note-box">
+        <div class="note-info">
+          <h3>${item[0]}</h3>
+          <p>${item[1]}</p>
+          <p>${item[2]}</p>
+        </div>
+        <div class="note-edit">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+    `
+}
+}
+updateNote();
+
+
 // get data from form
 formData.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -27,6 +53,8 @@ formData.addEventListener("submit", (e) => {
     const isadded = addedNote(JSON.stringify(infoArray));
     console.log(isadded)
     formData.style.display = "none";
+    updateNote();
 });
 
-// dynamic show data, edit data, delete data, dark theme,  search 
+
+// edit data, delete data, dark theme,  search 
