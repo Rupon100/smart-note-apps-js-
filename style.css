@@ -39,6 +39,7 @@ body {
     justify-content: space-between;
     align-items: center; 
     gap: 5px;
+    cursor: pointer;
 }
 .note1 img {
     width: 24px;
@@ -101,3 +102,38 @@ body {
 .note-edit button {
     padding: 5px 10px;
 }
+
+.box {
+    /* border: 1px solid; */
+}
+.form-info {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    display: none;
+}
+.form-info div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 3px;
+}
+.form-info input, textarea {
+    padding: 7px;
+}
+.form-info button {
+    padding: 5px 20px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.cancel-btn {
+    background-color: darkorange;
+}
+
+/* for dark theme target this 2 class (.function-box, .notes, .title) */

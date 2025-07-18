@@ -10,12 +10,37 @@
   <body>
     <h1 class="title">Smart Note Apps</h1>
     <div class="function-box">
-      <div class="function1">
-        <button class="note1">
-          <p>New Note</p>
-          <img src="./imgage/writing.png" alt="writing">
-        </button>
-        <button class="note2">mode <img src="./imgage/night-mode.png" alt="theme mode"></button>
+      <div class="box">
+        <!--note add-->
+        <div class="function1">
+          <button class="note1">
+            <p>New Note</p>
+            <img src="./imgage/writing.png" alt="writing" />
+          </button>
+          <button class="note2">
+            mode
+            <img src="./imgage/night-mode.png" alt="theme mode" />
+          </button>
+        </div>
+        <!--note form-->
+        <form action="" class="form-info">
+          <div>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="note title" />
+          </div>
+          <div>
+            <label for="date">Date</label>
+            <input type="datetime-local" name="date" id="date">
+          </div>
+          <div>
+            <label for="notes">body</label>
+            <textarea id="message" name="message" placeholder="notes body here"></textarea>
+          </div>
+          <div class="">
+            <button type="submit">Add</button>
+            <button class="cancel-btn">cancel</button>
+          </div>
+        </form>
       </div>
       <div class="function2">
         <p>Search</p>
@@ -23,17 +48,19 @@
       </div>
     </div>
     <div class="notes">
-        <div class="note-box">
-            <div class="note-info">
-                <h3>Note Title</h3>
-                <p>creation date</p>
-                <p>body here</p>
-            </div>
-            <div class="note-edit">
-                <button>Edit</button>
-                <button>Delete</button>
-            </div>
+      <div class="note-box">
+        <div class="note-info">
+          <h3>Note Title</h3>
+          <p>creation date</p>
+          <p>body here</p>
         </div>
+        <div class="note-edit">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
     </div>
+
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
